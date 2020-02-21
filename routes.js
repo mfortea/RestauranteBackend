@@ -8,17 +8,17 @@ const router = express.Router();
 
 // --------------- API REST CRUD
 
-router.get    ("/clientes",      cors(), controller.readClientes);   // Read All
-router.get    ("/clientes/:id",  cors(), controller.readCliente);    // Read
-router.delete ("/clientes/:id",  cors(), controller.deleteCliente);  // Delete
-router.put    ("/clientes/:id",  cors(), controller.updateCliente);  // Update
-router.post   ("/clientes",      cors(), controller.createCliente);  // Create
+router.get    ("/cocineros",          cors(), controller.readCocineros);     // Read All
+router.get    ("/cocineros/:nombre",  cors(), controller.readCocinero);      // Read
+router.delete ("/cocineros/:nombre",  cors(), controller.deleteCocinero);    // Delete
+router.put    ("/cocineros/:nombre",  cors(), controller.updateCocinero);    // Update
+router.post   ("/cocineros",          cors(), controller.createCocinero);    // Create
 
-router.get    ("/articulos",     cors(), controller.readArticulos);  // Read All
-router.get    ("/articulos/:id", cors(), controller.readArticulo);   // Read
-router.delete ("/articulos/:id", cors(), controller.deleteArticulo); // Delete
-router.put    ("/articulos/:id", cors(), controller.updateArticulo); // Update
-router.post   ("/articulos",     cors(), controller.createArticulo); // Create
+router.get    ("/platos",         cors(), controller.readPlatos);            // Read All
+router.get    ("/platos/:nombre", cors(), controller.readPlato);             // Read
+router.delete ("/platos/:nombre", cors(), controller.deletePlato);           // Delete
+router.put    ("/platos/:nombre", cors(), controller.updatePlato);           // Update
+router.post   ("/platos",         cors(), controller.createPlato);           // Create
 
 
 module.exports = router;
