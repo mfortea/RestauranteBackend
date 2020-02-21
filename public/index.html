@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Tienda Backend</title>
+    <title>Restaurante Backend</title>
     <meta charset="UTF-8">
 
     <meta name="description" content="Fullstack example">
@@ -13,83 +13,117 @@
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <style>
-        @import url("https://fonts.googleapis.com/css?family=Aclonica");
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: "Aclonica";
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: rgb(45, 45, 45);
+            color: white;
+            text-align: center;
         }
 
-        h1,
-        div,
-        img,
-        p {
-            margin-left: 50px;
+        table {
+            padding: 8px;
+            border-style: solid;
+            border-width: 2px;
+            margin: 0 auto;
         }
 
-        div {
-            padding: 30px;
+        a {
+            color: rgb(0, 81, 255);
+            text-decoration-line: none;
+            transition: 0.5s ease-in-out;
         }
 
-        p {
-            padding: 10px;
+        a:hover{
+            color: white;
+            transition: 0.2s ease-in-out;
         }
 
-        dt {
-            font-weight: bold;
-        }
-
-        dl,
-        dd {
-            font-size: .9rem;
-        }
-
-        dd {
-            margin-bottom: 0.2em;
-            margin-left: 16em;
-        }
-
-        a:hover {
-            text-decoration: none;
-            cursor: pointer;
-        }
     </style>
 </head>
 
 <body>
-    <img src="/favicon.png">
-    <h1>Tienda Backend</h1>
-    <p><small><b>API RESTful</b></small></p>
-    <p><small><b>Código fuente en <a
-                    href="https://github.com/jamj2000/tiendabackend">https://github.com/jamj2000/tiendabackend</a></b></small>
-    </p>
-    <p>Se proporciona la siguiente API:</p>
-    <p><strong>ARTÍCULOS</strong></p>
-    <div>
-        <dl>
-            <dt> /api/articulos &nbsp;&nbsp; POST </dt><dd> Crear artículo </dd>
-            <dt> /api/articulos &nbsp;&nbsp; GET ALL </dt><dd>Obtener todos los artículos.</dd> 
-            <dt> /api/articulos/<em>id</em> &nbsp;&nbsp; GET </dt><dd> Obtener artículo </dd>
-            <dt> /api/articulos/<em>id</em> &nbsp;&nbsp; PUT </dt><dd> Modificar artículo </dd>
-            <dt> /api/articulos/<em>id</em> &nbsp;&nbsp; DELETE </dt><dd> Eliminar artículo </dd>
+<img width="80px" src="favicon.png">
+<h1>Restaurante Backend</h1>
+<a href="https://restaurantefrontend.now.sh"><h3>Acceder al frontend</h3></a>
+<h3>La API proporcionada es la siguiente:</h3>
+<br>
+<h2>Para la colección COCINEROS:</h2>
+<table>
+    <tr>
+        <th>RUTA</th>
+        <th>MÉTODO HTTP</th>
+        <th>ACCIÓN</th>
+    </tr>
+    <tr>
+        <td>/api/cocineros</td>
+        <td>POST</td>
+        <td>Insertar cocinero</td>
+    </tr>
+    <tr>
+        <td>/api/cocineros</td>
+        <td>GET ALL</td>
+        <td>Obtener todos los cocineros</td>
+    </tr>
+    <tr>
+        <td>/api/cocineros/{nombre}</td>
+        <td>GET</td>
+        <td>Obtener un cocinero</td>
+    </tr>
+    <tr>
+        <td>/api/cocineros/{nombre}</td>
+        <td>UPDATE</td>
+        <td>Actualizar cocinero por nombre</td>
+    </tr>
+    <tr>
+        <td>/api/cocineros/{nombre}</td>
+        <td>DELETE</td>
+        <td>Eliminar cocinero por nombre</td>
+    </tr>
+</table>
 
-        </dl>
-    </div>
-    <p><strong>CLIENTES</strong></p>
-    <div>
-        <dl>
-            <dt> /api/clientes &nbsp;&nbsp; POST </dt><dd> Crear cliente </dd>
-            <dt> /api/clientes &nbsp;&nbsp; GET ALL </dt><dd>Obtener todos los clientes.</dd> 
-            <dt> /api/clientes/<em>id</em> &nbsp;&nbsp; GET </dt><dd> Obtener cliente </dd>
-            <dt> /api/clientes/<em>id</em> &nbsp;&nbsp; PUT </dt><dd> Modificar cliente </dd>
-            <dt> /api/clientes/<em>id</em> &nbsp;&nbsp; DELETE </dt><dd> Eliminar cliente </dd>
-        </dl>
-    </div>
-    <p><small>Frontend en <a href="https://tiendafrontend.now.sh/">https://tiendabackend.herokuapp.com</a></small></p>
+<br>
+<h2>Para la colección PLATOS:</h2>
+<table>
+    <tr>
+        <th>RUTA</th>
+        <th>MÉTODO HTTP</th>
+        <th>ACCIÓN</th>
+    </tr>
+    <tr>
+        <td>/api/platos</td>
+        <td>POST</td>
+        <td>Insertar plato</td>
+    </tr>
+    <tr>
+        <td>/api/platos</td>
+        <td>GET ALL</td>
+        <td>Obtener todos los platos</td>
+    </tr>
+    <tr>
+        <td>/api/platos/{nombre}</td>
+        <td>GET</td>
+        <td>Obtener un plato</td>
+    </tr>
+    <tr>
+        <td>/api/platos/{nombre}</td>
+        <td>UPDATE</td>
+        <td>Actualizar plato por nombre</td>
+    </tr>
+    <tr>
+        <td>/api/platos/{nombre}</td>
+        <td>DELETE</td>
+        <td>Eliminar plato por nombre</td>
+    </tr>
+</table>
+<br>
+<h2>Código fuente</h2>
+<a href="http://github.com/mfortea/RestauranteBackend"><h3>Repositorio del Backend</h3></a>
+<a href="http://github.com/mfortea/RestauranteFrontend"><h3>Repositorio del Frontend</h3></a>
+<br>
+
+
+
+
 </body>
 
 </html>
