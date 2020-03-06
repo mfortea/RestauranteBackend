@@ -7,6 +7,8 @@ Este backend está alojado en la siguiente dirección: http://restaurantebackend
 
 Las operaciones de esta API disponibles son:
 
+---
+
 ## Operaciones sobre los platos
 
 |RUTA	                        |MÉTODO HTTP	      |ACCIÓN                             |
@@ -17,6 +19,7 @@ Las operaciones de esta API disponibles son:
 |/api/platos/{nombre}	        |UPDATE	            |Actualizar plato por nombre        |
 |/api/platos/{nombre}	        |DELETE	            |Eliminar plato por nombre          |
 
+---
 
 ## Operaciones sobre los cocineros
 
@@ -28,6 +31,8 @@ Las operaciones de esta API disponibles son:
 |/api/cocineros/{nombre}	    |UPDATE	            |Actualizar cocinero por nombre     |
 |/api/cocineros/{nombre}	    |DELETE	            |Eliminar cocinero por nombre       |
 
+
+---
 
 ## Formato de los JSON
 A la hora de realizar operaciones de POST y UPDATE, debemos tener en cuenta el siguiente formato de JSON:
